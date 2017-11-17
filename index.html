@@ -1,0 +1,72 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Startpage</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+</head>
+<body>
+    <img src="assets/rubyrose.jpg">
+    <div id="container">
+        <div id="blocked">
+            <div id="logo">ジョシュア</div>
+            <div id="dial">
+                <table>
+                    <tr>
+                        <td>reddit</td>
+                        <td arr>»</td>
+                        <td lnk><a target="_blank" href="http://reddit.com/r/unixporn">up</a></td>
+                        <td lnk><a target="_blank" href="http://reddit.com/r/androidthemes">at</a></td>
+                        <td lnk><a target="_blank" href="http://reddit.com/r/talesfromtechsupport">tfts</a></td>
+                        <td lnk><a target="_blank" href="http://reddit.com/r/whowouldwin">www</a></td>
+                    </tr>
+                    <tr>
+                        <td>social</td>
+                        <td arr>»</td>
+                        <td lnk><a target="_blank" href="http://fb.com">fb</a></td>
+                        <td lnk><a target="_blank" href="http://inbox.google.com">inbox</a></td>
+                        <td lnk><a target="_blank" href="http://archiveofourown.org/">ao3</a></td>
+                        <td lnk><a target="_blank" href="http://forum.xda-developers.com">xda</a></td>
+                    </tr>
+                    <tr>
+                        <td>others</td>
+                        <td arr>»</td>
+                        <td lnk><a target="_blank" href="http://deviantart.com">da</a></td>
+                        <td lnk><a target="_blank" href="http://producthunt.com">prod</a></td>
+                        <td lnk><a target="_blank" href="http://github.com">git</a></td>
+                        <td lnk><a target="_blank" href="http://youtube.com">yt</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="search">
+                <form method="get" action="http://www.google.com/search">
+                    <input name="q" type="text" placeholder="Google" />
+                </form>
+            </div>
+        </div>
+<script type="text/javascript" src="assets/jquery.min.js"></script>
+<script type="text/javascript">
+var cl = function() {
+	var ca = ["#ed8c9a", "#f98d77", "#ffcb69", "#ffe269", "#fffa85"];
+	$("td[lnk]").each(function(){
+		var r = ca[~~(Math.random() * ca.length)];
+		$(this).css("background-color", r);
+	});
+};
+var rl = function(){
+	var l = $('#logo');
+	var cr = l.text().split("");
+	l.empty();
+	$.each(cr, function (i, e) {
+	    l.append('<span>' + e + '</span>');
+	});
+}
+$(function(){
+	var a = setInterval(cl,500);
+	var b = rl();
+});
+</script>
+
+</body>
+
+</html>
