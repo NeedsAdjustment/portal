@@ -420,7 +420,7 @@ if (localStorage.getItem("unit") == null) {
 	$("#far").attr('checked', 'checked');
 }
 
-var baseURL = "http://api.openweathermap.org/data/2.5/weather?q=";
+var baseURL = "https://api.openweathermap.org/data/2.5/weather?q=";
 var city = localStorage.getItem('locCity');
 var country = localStorage.getItem('locCountry')
 var key = "&APPID=15dac795069e9f6ef5b3c4c435136247";
@@ -431,7 +431,7 @@ $(".entercity").attr("value", city);
 $(".entercountry").attr("value", country);
 
 function getWeather() {
-	var baseURL = "http://api.openweathermap.org/data/2.5/weather?q=";
+	var baseURL = "https://api.openweathermap.org/data/2.5/weather?q=";
 	var city = localStorage.getItem('locCity');
 	var country = localStorage.getItem('locCountry')
 	var key = "&APPID=15dac795069e9f6ef5b3c4c435136247";
