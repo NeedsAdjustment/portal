@@ -72,6 +72,7 @@
 		</div>
 	</div>
 <style>
+	@import url('https://fonts.googleapis.com/css?family=Montserrat');
 	body {
 		font-family: 'Montserrat';
 		margin: 0;
@@ -404,11 +405,11 @@ $(".x").click(function(){
 });
 
 if (localStorage.getItem("locCity") == null) {
-	localStorage.setItem("locCity", "kelowna")
+	localStorage.setItem("locCity", "palmerston north")
 }
 
 if (localStorage.getItem("locCountry") == null) {
-	localStorage.setItem("locCountry", "ca")
+	localStorage.setItem("locCountry", "nz")
 }
 if (localStorage.getItem("unit") == null) {
 	localStorage.setItem("unit", "&deg;C")
@@ -450,7 +451,7 @@ function getWeather() {
 			temp = Math.round(temp);
 		}
 
-		$("#weather").empty().append(result.name + ": " + temp + " " + unit + ", " + result.weather[0].description);
+		$("#weather").empty().append(result.name + ": " + temp + unit + ", " + result.weather[0].description);
 	});
 }
 getWeather();
@@ -487,17 +488,17 @@ switch (monthday) {
 	case 21:
 	case 31:
     	var affix = "st";
-		$('#month-date').html(months[month] + " " + monthday + "<sup>" + affix + "</sup> " + ", " + (year+1900));
+		$('#month-date').html(months[month] + " " + monthday + "<sup>" + affix + "</sup>" + ", " + (year+1900));
     	break;
 	case 2:
 	case 22:
     	var affix = "nd";
-		$('#month-date').html(months[month] + " " + monthday + "<sup>" + affix + "</sup> " + ", " + (year+1900));
+		$('#month-date').html(months[month] + " " + monthday + "<sup>" + affix + "</sup>" + ", " + (year+1900));
     	break;
 	case 3:
 	case 23:
      	var affix = "rd";
-		$('#month-date').html(months[month] + " " + monthday + "<sup>" + affix + "</sup> " + ", " + (year+1900));
+		$('#month-date').html(months[month] + " " + monthday + "<sup>" + affix + "</sup>" + ", " + (year+1900));
    	break;
 	case 4:
 	case 5:
@@ -524,7 +525,7 @@ switch (monthday) {
 	case 29:
 	case 30:
    	var affix = "th";
-		$('#month-date').html(months[month] + " " + monthday + "<sup>" + affix + "</sup> " + ", " + (year+1900));
+		$('#month-date').html(months[month] + " " + monthday + "<sup>" + affix + "</sup>" + ", " + (year+1900));
 }
 
 function btcprice() {
