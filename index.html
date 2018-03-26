@@ -83,7 +83,7 @@
 	}
 	p {
 		font-family: 'Montserrat';
-		color: rgb(227, 131, 127);
+		color: #F0696F;
 		font-size: 15px;
 	}
 	a {
@@ -118,7 +118,7 @@
 		color: #F0696F !important;
 	}
 	.school-cat {
-		border-right: 1px solid #e37fad;
+		border-right: 1px solid #F0696F;
 		color: #F0696F !important;
 	}
 	.news {
@@ -293,7 +293,7 @@
 	}
 	.top-left {
 		width: 50%;
-		border-right: 1px solid rgb(227, 131, 127);
+		border-right: 1px solid #F0696F;
 		float: left;
 		height: 100%;
 	}
@@ -355,7 +355,7 @@
 	}
 
 	input[type=radio]:not(:checked) ~ label{
-		color: rgb(227, 131, 127);
+		color: #F0696F;
 	}
 
 	input[type=radio]:checked ~ .check {
@@ -529,7 +529,7 @@ switch (monthday) {
 }
 
 function btcprice() {
-var currency = "NZD";
+var currency = "USD";
 var apiurl = 'https://api.coindesk.com/v1/bpi/currentprice/' + currency + '.json';
 
 $.ajax({
@@ -562,7 +562,9 @@ function updatepost() {
       success: function(data){
         var title = data["data"]["children"][postnum]["data"]["title"];
 		var score = data["data"]["children"][postnum]["data"]["score"];
-		  	$("#news-title").empty().prepend(title);
+		var trimmedtitle = title.substring(0, 70);
+		trimmedtitle += "..."
+		  	$("#news-title").empty().prepend(trimmedtitle);
 		  	$("#score-3").empty().append('<i class="fa fa-heart"> </i>' + ' ' + score);
 		  	$("#news-title-link").attr("href","https://reddit.com" + data["data"]["children"][postnum]["data"]["permalink"]);
       	},
