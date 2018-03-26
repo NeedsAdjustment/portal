@@ -6,7 +6,6 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
 	<title>Hey Hey Hey</title>
 </head>
-
 <body>
 	<div id="top">
 		<div class="top-left">
@@ -41,35 +40,37 @@
 		</div>
 		</div>
 	</div>
-	
+
 	<div id="bottom">
 		<div class="container-rect">
 			<div id="search">
 				<input id="search-bar" type="text" placeholder="search" />
 				<div id="links">
 					<p class="reddit-links">
-						<a href="http://reddit.com/"><div class="link category reddit-cat">reddit</div></a> 
-						<a id="reddit-link-1" href="http://reddit.com/r/hiphopheads"><span class="link reddit reddit1">hiphopheads</span></a> 
-						<a id="reddit-link-2" href="http://reddit.com/r/streetwear"><span class="link reddit reddit2">streetwear</span></a> 
-						<a id="reddit-link-3" href="http://reddit.com/r/webdev"><span class="link reddit reddit3">webdev</span></a> 
+						<a href="http://reddit.com/"><div class="link category reddit-cat">reddit</div></a>
+						<a id="reddit-link-1" href="http://reddit.com/r/unixporn"><span class="link reddit reddit1">unixporn</span></a>
+						<a id="reddit-link-2" href="http://reddit.com/r/androidthemes"><span class="link reddit reddit2">androidthemes</span></a>
+						<a id="reddit-link-3" href="http://reddit.com/r/overwatch"><span class="link reddit reddit3">overwatch</span></a>
+						<a id="reddit-link-4" href="http://reddit.com/r/windows10"><span class="link reddit reddit4">windows10</span></a>
 					</p>
-					<p class="news-links">
-						<a href=""><div class="link category news-cat">news</div></a> 
-						<a id="news-link-1" href="https://arstechnica.com/"><span class="link news news1">ars technica</span></a> 
-						<a id="news-link-2" href="http://theverge.com/"><span class="link news news2">the verge</span></a> 
-						<a id="news-link-3" href="https://techcrunch.com/"><span class="link news news3">techcrunch</span></a> 
+					<p class="school-links">
+						<a href=""><div class="link category school-cat">school</div></a>
+						<a id="school-link-1" href="http://stream.massey.ac.nz/my/"><span class="link school school1">stream</span></a>
+						<a id="school-link-2" href="https://smsportal.massey.ac.nz/"><span class="link school school2">smhportal</span></a>
+						<a id="school-link-3" href="https://mailchimp.com/"><span class="link school school3">mailchimp</span></a>
+						<a id="school-link-4" href="https://drive.google.com/drive/my-drive"><span class="link school school4">drive</span></a>
 					</p>
 					<p class="code-links">
-						<a href=""><div class="link category code-cat">code</div></a> 
-						<a id="code-link-1" href="https://github.com/"><span class="link code code1">github</span></a> 
-						<a id="code-link-2" href="http://codepen.io/"><span class="link code code2">codepen</span></a> 
-						<a id="code-link-3" href="https://www.codewars.com/"><span class="link code code3">codewars</span></a> 
+						<a href=""><div class="link category code-cat">code</div></a>
+						<a id="code-link-1" href="https://github.com/"><span class="link code code1">github</span></a>
+						<a id="code-link-2" href="https://forum.xda-developers.com/mi-a1/"><span class="link code code2">xdadev</span></a>
+						<a id="code-link-3" href="https://www.deviantart.com/notifications/"><span class="link code code3">deviantart</span></a>
+						<a id="code-link-4" href="https://www.producthunt.com/"><span class="link code code4">producthunt</span></a>
 					</p>
 				</div>
 			</div>
 		</div>
 	</div>
-	
 <style>
 	body {
 		font-family: 'Montserrat';
@@ -111,11 +112,11 @@
 	.code:hover {
 		color: #7fe383 !important;
 	}
-	
-	.news-cat a {
+
+	.school-cat a {
 		color: #F0696F !important;
 	}
-	.news-cat {
+	.school-cat {
 		border-right: 1px solid #e37fad;
 		color: #F0696F !important;
 	}
@@ -168,27 +169,27 @@
 		font-size: 15px;
 		text-align: center;
 	}
-	::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	::-webkit-input-placeholder {
 		font-family: 'Montserrat';
 		color: #7fe383;
 		opacity: 1;
 	}
-	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	:-moz-placeholder {
 		font-family: 'Montserrat';
 		color: #7fe383;
 		opacity: 1;
 	}
-	::-moz-placeholder { /* Mozilla Firefox 19+ */
+	::-moz-placeholder {
 		font-family: 'Montserrat';
 		color: #7fe383;
 		opacity: 1;
 	}
-	:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	:-ms-input-placeholder {
 		font-family: 'Montserrat';
 		color: #7fe383;
 		opacity: 1;
 	}
-	::-ms-input-placeholder { /* Microsoft Edge */
+	::-ms-input-placeholder {
 		font-family: 'Montserrat';
 		color: #7fe383;
 		opacity: 1;
@@ -238,7 +239,7 @@
 	}
 	#top {
 		border: 1px solid #F0696F;
-		background-color: rgba(0, 0, 0, 0.5);f;
+		background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("grain.png");
 		height: 130px;
 		width: calc(100% - 2px);
 	}
@@ -248,7 +249,7 @@
 		padding-top: 60px;
 	}
 	.container-rect {
-		background-color: rgba(0, 0, 0, 0.5);
+		background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("grain.png");
 		height: auto;
 		width: 700px;
 		border: 1px solid #F0696F;
@@ -301,8 +302,8 @@
 		height: 100%;
 	}
 	hr {
-		border: 0; 
-		height: 2px; 
+		border: 0;
+		height: 2px;
 		background-image: linear-gradient(to right, rgba(227, 131, 127, 0), rgba(227, 131, 127, 0.75), rgba(227, 131, 127, 0));
 	}
 	/* radio buttons */
@@ -318,13 +319,13 @@
 		cursor: pointer;
 		border: 1px solid rgb(227, 131, 127);
 		padding: 4px;
-	}	
-	
+	}
+
 	ul li {
 		display: inline;
 		margin-right: 30px;
-	}	
-	
+	}
+
 	ul li input[type=radio]{
 		visibility: hidden;
 		float: left;
@@ -354,8 +355,8 @@
 
 	input[type=radio]:not(:checked) ~ label{
 		color: rgb(227, 131, 127);
-	}	
-	
+	}
+
 	input[type=radio]:checked ~ .check {
 		border: 5px solid #7fdfe3;
 	}
@@ -368,34 +369,32 @@
 		color: #7fdfe3;
 		border: 1px solid #7fdfe3;
 	}
-</style>	
-	
+</style>
+
 <script>
 $(document).ready(function(){
 
-$(".container-rect").addClass("animated bounceInUp");	
-	
+$(".container-rect").addClass("animated bounceInUp");
+
 $(".reddit-links").mouseover(function(){
 	$('.reddit-cat').css("border-right", "2px solid #7fdfe3");
 });
 $(".reddit-links").mouseout(function(){
 	$('.reddit-cat').css("border-right", "1px solid #7fdfe3");
 });
-$(".news-links").mouseover(function(){
-	$('.news-cat').css("border-right", "2px solid #e37fad");
-});	
-$(".news-links").mouseout(function(){
-	$('.news-cat').css("border-right", "1px solid #e37fad");
-});	
-	
-	
+$(".school-links").mouseover(function(){
+	$('.school-cat').css("border-right", "2px solid #e37fad");
+});
+$(".school-links").mouseout(function(){
+	$('.school-cat').css("border-right", "1px solid #e37fad");
+});
+
 $("#search-bar").keypress(function(event) {
 var searchQuery = $("#search-bar").val();
   if ( event.which == 13 ) {
     window.location.href = 'http://www.google.com/search?q=' + searchQuery;
   }
-}); // END Keypress Function		
-	
+});
 $(".settings").hide();
 $(".fa-gear").click(function(){
 	$(".settings").slideToggle();
@@ -403,11 +402,11 @@ $(".fa-gear").click(function(){
 $(".x").click(function(){
 	$(".settings").slideToggle();
 });
-		
+
 if (localStorage.getItem("locCity") == null) {
 	localStorage.setItem("locCity", "kelowna")
 }
-	
+
 if (localStorage.getItem("locCountry") == null) {
 	localStorage.setItem("locCountry", "ca")
 }
@@ -419,12 +418,12 @@ if (localStorage.getItem("unit") == null) {
 } else if(localStorage.getItem("unit") == "&deg;F") {
 	$("#far").attr('checked', 'checked');
 }
-	
+
 var baseURL = "http://api.openweathermap.org/data/2.5/weather?q=";
 var city = localStorage.getItem('locCity');
 var country = localStorage.getItem('locCountry')
-var key = "&APPID=15dac795069e9f6ef5b3c4c435136247";	
-var apiurl = baseURL + city + "," + country + key;	
+var key = "&APPID=15dac795069e9f6ef5b3c4c435136247";
+var apiurl = baseURL + city + "," + country + key;
 var unit = localStorage.getItem('unit');
 
 $(".entercity").attr("value", city);
@@ -473,7 +472,6 @@ $("#save").click(function(){
 	$(".settings").slideToggle();
 });
 
-//Date Functionality
 var date = new Date();
 var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -491,96 +489,94 @@ switch (monthday) {
     	var affix = "st";
 		$('#month-date').html(months[month] + " " + monthday + "<sup>" + affix + "</sup> " + ", " + (year+1900));
     	break;
-	case 2: 
+	case 2:
 	case 22:
     	var affix = "nd";
 		$('#month-date').html(months[month] + " " + monthday + "<sup>" + affix + "</sup> " + ", " + (year+1900));
     	break;
-	case 3: 
+	case 3:
 	case 23:
      	var affix = "rd";
 		$('#month-date').html(months[month] + " " + monthday + "<sup>" + affix + "</sup> " + ", " + (year+1900));
    	break;
-	case 4: 
-	case 5: 
-	case 6: 
-	case 7: 
-	case 8: 
-	case 9: 
-	case 10: 
-	case 11: 
-	case 12: 
-	case 13: 
-	case 14: 
-	case 15: 
-	case 16: 
-	case 17: 
-	case 18: 
-	case 19: 
-	case 20: 
-	case 24: 
-	case 25: 
-	case 26: 
-	case 27: 
-	case 28: 
+	case 4:
+	case 5:
+	case 6:
+	case 7:
+	case 8:
+	case 9:
+	case 10:
+	case 11:
+	case 12:
+	case 13:
+	case 14:
+	case 15:
+	case 16:
+	case 17:
+	case 18:
+	case 19:
+	case 20:
+	case 24:
+	case 25:
+	case 26:
+	case 27:
+	case 28:
 	case 29:
 	case 30:
    	var affix = "th";
 		$('#month-date').html(months[month] + " " + monthday + "<sup>" + affix + "</sup> " + ", " + (year+1900));
-}		
-	
-// Current Bitcoin Price Function	
+}
+
 function btcprice() {
 var currency = "NZD";
 var apiurl = 'https://api.coindesk.com/v1/bpi/currentprice/' + currency + '.json';
-    
+
 $.ajax({
   type: "GET",
   url: apiurl,
   async: false,
   dataType: 'json',
-  success: function(data){ 
+  success: function(data){
     var price = data["bpi"][currency]["rate_float"];
 	  var priceRounded = Math.round(price);
 	  $("#btc-price").append("$" + priceRounded + " " + currency);
-    }, 
+    },
   error: function(errorMessage){
       alert("ajax call failed");
-    }  
-}); // END ajax call	
+    }
+}); // END ajax call
 }
-btcprice();	
+btcprice();
 
 var subreddit = "News";
 var apiurl = 'https://www.reddit.com/r/' + subreddit + '/.json?';
 var postnum = 1;
-	
+
 function updatepost() {
     $.ajax({
       type: "GET",
       url: apiurl,
       async: false,
       dataType: 'json',
-      success: function(data){ 
+      success: function(data){
         var title = data["data"]["children"][postnum]["data"]["title"];
 		var score = data["data"]["children"][postnum]["data"]["score"];
 		  	$("#news-title").empty().prepend(title);
 		  	$("#score-3").empty().append('<i class="fa fa-heart"> </i>' + ' ' + score);
 		  	$("#news-title-link").attr("href","https://reddit.com" + data["data"]["children"][postnum]["data"]["permalink"]);
-      	}, 
+      	},
       	error: function(errorMessage){
         	alert("Reddit ajax call failed");
-  		}      
+  		}
     }); // END ajax call
 } // End Update Post function
 updatepost();
-	
+
 $("#next-post-news").click(function(){
 	postnum = postnum+2;
 	updatepost();
-});	
-	
-});	
-</script>	
-	
+});
+
+});
+</script>
 </body>
