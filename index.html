@@ -45,24 +45,24 @@
 				<input id="search-bar" type="text" placeholder="search" />
 				<div id="links">
 					<p class="reddit-links">
-						<a href="http://reddit.com/"><div class="link category reddit-cat">reddit</div></a>
+						<a href=""><div class="link category reddit-cat">themes</div></a>
 						<a id="reddit-link-1" href="http://reddit.com/r/unixporn"><span class="link reddit reddit1">unixporn</span></a>
 						<a id="reddit-link-2" href="http://reddit.com/r/androidthemes"><span class="link reddit reddit2">androidthemes</span></a>
-						<a id="reddit-link-3" href="http://reddit.com/r/overwatch"><span class="link reddit reddit3">overwatch</span></a>
+						<a id="reddit-link-3" href="http://reddit.com/r/desktops"><span class="link reddit reddit3">desktops</span></a>
 						<a id="reddit-link-4" href="http://reddit.com/r/windows10"><span class="link reddit reddit4">windows10</span></a>
 					</p>
 					<p class="school-links">
-						<a href=""><div class="link category school-cat">school</div></a>
-						<a id="school-link-1" href="http://stream.massey.ac.nz/my/"><span class="link school school1">stream</span></a>
-						<a id="school-link-2" href="https://smsportal.massey.ac.nz/"><span class="link school school2">smhportal</span></a>
-						<a id="school-link-3" href="https://mailchimp.com/"><span class="link school school3">mailchimp</span></a>
-						<a id="school-link-4" href="https://drive.google.com/drive/my-drive"><span class="link school school4">drive</span></a>
+						<a href=""><div class="link category school-cat">games</div></a>
+						<a id="school-link-1" href="https://twitch.tv"><span class="link school school1">twitch</span></a>
+						<a id="school-link-2" href="http://reddit.com/r/competitiveoverwatch"><span class="link school school2">compow</span></a>
+						<a id="school-link-3" href="http://reddit.com/r/overwatchtmz"><span class="link school school3">owtmz</span></a>
+						<a id="school-link-4" href="https://www.overbuff.com/players/pc/Edgedancer-11368"><span class="link school school4">overbuff</span></a>
 					</p>
 					<p class="code-links">
-						<a href=""><div class="link category code-cat">code</div></a>
+						<a href=""><div class="link category code-cat">tech</div></a>
 						<a id="code-link-1" href="https://github.com/"><span class="link code code1">github</span></a>
 						<a id="code-link-2" href="https://forum.xda-developers.com/mi-a1/"><span class="link code code2">xdadev</span></a>
-						<a id="code-link-3" href="https://www.deviantart.com/notifications/"><span class="link code code3">deviantart</span></a>
+						<a id="code-link-3" href="https://drive.google.com"><span class="link code code3">drive</span></a>
 						<a id="code-link-4" href="https://www.producthunt.com/"><span class="link code code4">producthunt</span></a>
 					</p>
 				</div>
@@ -548,9 +548,7 @@ $.ajax({
 	  var priceRounded = Math.round(price);
 	  $("#btc-price").append("$" + priceRounded + " " + currency);
     },
-  error: function(errorMessage){
-      alert("Enable tracking or get off incognito lol");
-    }
+  error: function(errorMessage){}
 });
 }
 btcprice();
@@ -574,9 +572,7 @@ function updatepost() {
 		  	$("#score-3").empty().append('<i class="fa fa-heart"> </i>' + ' ' + score);
 		  	$("#news-title-link").attr("href","https://reddit.com" + data["data"]["children"][postnum]["data"]["permalink"]);
       	},
-      	error: function(errorMessage){
-        	alert("Reddit ajax call failed");
-  		}
+      	error: function(errorMessage){}
     }); // END ajax call
 } // End Update Post function
 updatepost();
