@@ -9,33 +9,16 @@
 		<div class="top-left">
 			<div class="pad-left">
 				<p class="date"><span id="weekday"></span> <span id="month-date"></span></p>
-				<p class="weather-widget"><i class="fa fa-gear"> </i> <span id="weather"></span></p>
-				<div class="settings">
-					<p class="x">x</p>
-					<p>City: <input class="enter entercity" type="text" /></p>
-					<p>Country: <input class="enter entercountry" type="text" /></p>
-					<p>Please use ISO 3166 country codes. <br/>Find your country code here: <a href="https://www.iso.org/obp/ui/#search">iso.org</a></p>
-					<ul>
-						<li>
-							<input type="radio" id="cel" name="unit" value="cel">
-							<label for="cel">&deg;C</label>
-						</li>
-						<li>
-							<input type="radio" id="far" name="unit" value="far">
-							<label for="far">&deg;F</label>
-						</li>
-					</ul>
-					<button id="save">save</button>
-				</div>
+				<p class="weather-widget"> <span id="weather"></span></p>
 				<p id="btc-price">BTC Price: </p>
 			</div>
 		</div>
 		<div class="top-right">
-	    <div class="pad-right">
-			<a href="" id="news-title-link"><p><span id="news-title"></span></p></a>
-			<p><span id="score-3"></span></p>
-			<p><span id="next-post-news">next post &rarr;</span></p>
-		</div>
+			<div class="pad-right">
+				<a href="" id="news-title-link"><p><span id="news-title"></span></p></a>
+				<p><span id="score-3"></span></p>
+				<p><span id="next-post-news">next post &rarr;</span></p>
+			</div>
 		</div>
 	</div>
 
@@ -78,7 +61,10 @@
 	</div>
 <style>
 	@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 	body {
+		font-size: 15px;
+		line-height: 20px;
 		font-family: 'Montserrat';
 		margin: 0;
 		background: url("background.gif") no-repeat center center fixed;
@@ -86,74 +72,35 @@
 		-moz-background-size: cover;
 		-webkit-background-size: cover;
 	}
+
 	p {
-		font-family: 'Montserrat';
-		color: #3298FE;
-		font-size: 15px;
-	}
-	a {
-		color: #FF2851;
-		text-decoration: none;
-	}
-	input[type=text] {
-		color: #3ECF8E;
-		font-family: 'Montserrat';
-		font-size: 15px;
-	}
-	#links {
-		padding-left: 5%;
-		margin-top: 3em;
-		margin-bottom: 3em;
-	}
-	.code-cat a {
-		color: #3ECF8E !important;
-	}
-	.code-cat {
-		border-right: 2px solid #3ECF8E;
-	}
-	.code {
-		cursor: pointer;
-		transition: color 0.5s ease;
-	}
-	.code:hover {
-		color: #C8FFE0 !important;
+		max-width: 800;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 	}
 
-	.games-cat a {
-		color: #F7A623 !important;
-	}
-	.games-cat {
-		border-right: 2px solid #F7A623;
-		color: #F7A623 !important;
-	}
-	.games {
+	a {text-decoration: none}
+
+	#links {padding-left: 5%}
+
+	.code, .games, .reddit {
 		cursor: pointer;
 		transition: color 0.5s ease;
 	}
-	.games:hover {
-		color: #FFF7D3 !important;
-	}
-	.news {
-		cursor: pointer;
-		transition: color 0.5s ease;
-	}
-	.news:hover {
-		color: #3298FE !important;
-	}
-	.reddit-cat a {
-		color: #FF2851 !important;
-	}
-	.reddit-cat {
-		border-right: 2px solid #FF2851;
-		color: #FF2851 !important;
-	}
-	.reddit {
-		cursor: pointer;
-		transition: color 0.5s ease;
-	}
-	.reddit:hover {
-		color: #FAC0F2 !important;
-	}
+
+	.code-cat a {color: #3ECF8E !important}
+	.code-cat {border-right: 2px solid #3ECF8E}
+	.code:hover {color: #C8FFE0 !important}
+
+	.games-cat a {color: #F7A623 !important}
+	.games-cat {border-right: 2px solid #F7A623}
+	.games:hover {color: #FFF7D3 !important}
+
+	.reddit-cat a {color: #FF2851 !important}
+	.reddit-cat {border-right: 2px solid #FF2851}
+	.reddit:hover {color: #FAC0F2 !important}
+
 	.category {
 		padding-right: 14px;
 		width: 50px;
@@ -163,15 +110,10 @@
 		margin-right: 14px;
 		color: #F7F7F7;
 	}
-	.link.news a {
-		color: #F7F7F7;
-	}
-	.link.news a:hover {
-		color: #3298FE !important;
-	}
+
 	#search-bar {
     	width: 90%;
-    	border-bottom: 2px solid #F7F7F7;
+    	border-bottom: 2px solid #3298FE;
 		border-top: 0;
 		border-left: 0;
 		border-right: 0;
@@ -182,61 +124,23 @@
 		background-color: transparent;
 		font-size: 15px;
 		text-align: center;
+		font-family: "Montserrat";
 	}
-	::-webkit-input-placeholder {
-		font-family: 'Montserrat';
+	::-webkit-input-placeholder, :-moz-placeholder,	::-moz-placeholder, :-ms-input-placeholder, ::-ms-input-placeholder {
 		color: #F7F7F7;
 		opacity: 1;
 	}
-	:-moz-placeholder {
-		font-family: 'Montserrat';
-		color: #F7F7F7;
-		opacity: 1;
-	}
-	::-moz-placeholder {
-		font-family: 'Montserrat';
-		color: #F7F7F7;
-		opacity: 1;
-	}
-	:-ms-input-placeholder {
-		font-family: 'Montserrat';
-		color: #F7F7F7;
-		opacity: 1;
-	}
-	::-ms-input-placeholder {
-		font-family: 'Montserrat';
-		color: #F7F7F7;
-		opacity: 1;
-	}
-	.fa-gear {
-		cursor: pointer;
-	}
-	.enter {
-		border: 0;
-		border-bottom: 2px solid #3298FE;
-		background-color: transparent;
-	}
-	#news-title {
+
+	#news-title, #news-title-link {
 		color: #3ECF8E;
+	}
+	#news-title-link.hover {
+		color: #C8FFE0;
 	}
 	#score-3 {
 		color: #3298FE;
 	}
-	#save {
-		border: 2px solid #3298FE;
-		cursor: pointer;
-		font-family: 'Montserrat';
-		font-size: 15px;
-	}
-	.x {
-		position: absolute;
-		color: #3298FE;
-		right: 12px;
-		top: 5px;
-		padding: 0;
-		margin: 0;
-		cursor: pointer;
-	}
+
 	.date {
 		color: #3ECF8E;
 	}
@@ -246,12 +150,13 @@
 	#btc-price {
 		color: #F7F7F7;
 	}
+
 	#top {
 		background: #191919;
 		height: 130px;
-		width: calc(100% - 20px);
+		width: 900px;
 		margin: auto;
-		margin-top: 10px;
+		margin-top: 100px;
 		border-radius: 8px;
 		box-shadow: 0px 2px 2px;
 	}
@@ -260,6 +165,7 @@
 		width: 100%;
 		padding-top: 60px;
 	}
+
 	.container-rect {
 		background: #191919;
 		height: auto;
@@ -267,45 +173,29 @@
 		border-radius: 8px;
 		border: 2px solid #191919;
 		position: relative;
-		top: 15%;
+		top: 5%;
 		margin: 0 auto;
 		box-shadow: 0px 2px 2px;
 	}
+
 	#next-post-news {
 		cursor: pointer;
 		color: #F7F7F7;
 	}
-	h1, h2, h3, p {
-		font-family: 'Montserrat';
-	}
-	.title {
-		text-transform: uppercase;
-		letter-spacing: 2px;
-		color: white;
-		text-align: center;
-	}
+
 	#searchbar {
 		background-color: transparent;
 		border: 0;
 		width: 90%;
 		text-align: center;
 	}
-	.settings {
-		width: 300px;
-		background-color: #1f1f1f;
-		border: 2px solid #3298FE;
-		position: absolute;
-		top: 80px;
-		padding: 1em;
-	}
-	.pad-left {
-		padding-left: 1em;
-	}
-	.pad-right {
-		padding-left: 1em;
-	}
+
+	.pad-left, .pad-right {padding-left: 1em}
+
 	.top-left {
+		position: relative;
 		width: 16%;
+		min-width: 280px;
 		border-right: 2px solid #3298FE;
 		float: left;
 		height: 100%;
@@ -313,78 +203,13 @@
 		padding-right: 15px;
 	}
 	.top-right {
-    	width: calc(84% - 17px);
-    	float: right;
+		width: 84%;
+		max-width: 580px;
+    	float: left;
 		height: 100%;
-		padding-top: 3px;
-	}
-	hr {
-		border: 0;
-		height: 2px;
-		background-image: linear-gradient(to right, rgba(227, 131, 127, 0), rgba(227, 131, 127, 0.75), rgba(227, 131, 127, 0));
-	}
-	/* radio buttons */
-	ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		margin-bottom: 1em;
-		text-align: center;
-	}
-
-	label[for="far"], label[for="cel"] {
-		cursor: pointer;
-		border: 2px solid rgb(227, 131, 127);
-		padding: 4px;
-	}
-
-	ul li {
-		display: inline;
-		margin-right: 30px;
-	}
-
-	ul li input[type=radio]{
-		visibility: hidden;
-		float: left;
-		display: none;
-	}
-
-	ul li .check::before {
+		padding-top: 2px;
+		padding-left: 297px;
 		position: absolute;
-		content: '';
-		border-radius: 100%;
-		height: 15px;
-		width: 15px;
-		top: 5px;
-		left: 5px;
-		margin: auto;
-		transition: background 0.25s linear;
-		-webkit-transition: background 0.25s linear;
-	}
-
-	input[type=radio]:not(:checked) ~ .check {
-		border: 5px solid #3298FE;
-	}
-
-	input[type=radio]:not(:checked) ~ .check::before{
-		background: #3298FE;
-	}
-
-	input[type=radio]:not(:checked) ~ label{
-		color: #3298FE;
-	}
-
-	input[type=radio]:checked ~ .check {
-		border: 5px solid #FF2851;
-	}
-
-	input[type=radio]:checked ~ .check::before{
-		background: #FF2851;
-	}
-
-	input[type=radio]:checked ~ label{
-		color: #FF2851;
-		border: 2px solid #FF2851;
 	}
 </style>
 
@@ -393,37 +218,16 @@ $(document).ready(function(){
 
 $(".container-rect").addClass("animated bounceInUp");
 
-$(".reddit-links").mouseover(function(){
-	$('.reddit-cat').css("border-right", "2px solid #FF2851");
-});
-$(".reddit-links").mouseout(function(){
-	$('.reddit-cat').css("border-right", "2px solid #FF2851");
-});
-$(".games-links").mouseover(function(){
-	$('.games-cat').css("border-right", "2px solid #e37fad");
-});
-$(".games-links").mouseout(function(){
-	$('.games-cat').css("border-right", "2px solid #e37fad");
-});
-
 $("#search-bar").keypress(function(event) {
 var searchQuery = $("#search-bar").val();
   if ( event.which == 13 ) {
     window.location.href = 'http://www.google.com/search?q=' + searchQuery;
   }
 });
-$(".settings").hide();
-$(".fa-gear").click(function(){
-	$(".settings").slideToggle();
-});
-$(".x").click(function(){
-	$(".settings").slideToggle();
-});
 
 if (localStorage.getItem("locCity") == null) {
 	localStorage.setItem("locCity", "palmerston north")
 }
-
 if (localStorage.getItem("locCountry") == null) {
 	localStorage.setItem("locCountry", "nz")
 }
@@ -576,7 +380,13 @@ function updatepost() {
       success: function(data){
         var title = data["data"]["children"][postnum]["data"]["title"];
 		var score = data["data"]["children"][postnum]["data"]["score"];
-		  	$("#news-title").empty().prepend(title);
+		if (title.length >= 100) {
+			var shorttitle = title.substring(0, 70);
+			shorttitle += "...";
+		} else {
+			var shorttitle = title;
+		}
+		  	$("#news-title").empty().prepend(shorttitle);
 		  	$("#score-3").empty().append('<i class="fa fa-heart"> </i>' + ' ' + score);
 		  	$("#news-title-link").attr("href","https://reddit.com" + data["data"]["children"][postnum]["data"]["permalink"]);
       	},
