@@ -63,6 +63,9 @@
 	@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 	body {
+		position: absolute;
+		width: 100%;
+		height: 100%;
 		font-size: 15px;
 		line-height: 20px;
 		font-family: 'Montserrat';
@@ -152,23 +155,24 @@
 	}
 
 	#top {
+		position: relative;
 		background: #191919;
 		height: 130px;
 		width: 900px;
 		margin: auto;
-		margin-top: 100px;
+		margin-top: 150px;
 		border-radius: 8px;
 		box-shadow: 0px 2px 2px;
 	}
 	#bottom {
-		height: 69%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
 		width: 100%;
-		padding-top: 60px;
 	}
 
 	.container-rect {
 		background: #191919;
-		height: auto;
 		width: 700px;
 		border-radius: 8px;
 		border: 2px solid #191919;
@@ -308,17 +312,17 @@ switch (monthday) {
 	case 21:
 	case 31:
     	var affix = "st";
-		$('#month-date').html(months[month] + " " + monthday + "<sup>" + affix + "</sup>" + ", " + (year+1900));
+		$('#month-date').html(months[month] + " " + monthday + "<sup>" + affix + "</sup> " + (year+1900));
     	break;
 	case 2:
 	case 22:
     	var affix = "nd";
-		$('#month-date').html(months[month] + " " + monthday + "<sup>" + affix + "</sup>" + ", " + (year+1900));
+		$('#month-date').html(months[month] + " " + monthday + "<sup>" + affix + "</sup> " + (year+1900));
     	break;
 	case 3:
 	case 23:
      	var affix = "rd";
-		$('#month-date').html(months[month] + " " + monthday + "<sup>" + affix + "</sup>" + ", " + (year+1900));
+		$('#month-date').html(months[month] + " " + monthday + "<sup>" + affix + "</sup> " + (year+1900));
    	break;
 	case 4:
 	case 5:
@@ -345,7 +349,7 @@ switch (monthday) {
 	case 29:
 	case 30:
    	var affix = "th";
-		$('#month-date').html(months[month] + " " + monthday + "<sup>" + affix + "</sup>" + ", " + (year+1900));
+		$('#month-date').html(months[month] + " " + monthday + "<sup>" + affix + "</sup>" + (year+1900));
 }
 
 function btcprice() {
