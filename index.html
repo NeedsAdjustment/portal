@@ -263,7 +263,6 @@ function getWeather() {
 	var unit = localStorage.getItem('unit');
 
 	$.getJSON(apiurl,function(result){
-    	console.log(result);
 		var temp = result.main.temp;
 		if (localStorage.getItem("unit") == "&deg;C") {
 			temp = temp - 273.15;
