@@ -236,11 +236,25 @@ $(document).ready(function(){
 $(".container-rect").addClass("animated bounceInUp");
 
 $("#search-bar").keypress(function(event) {
-var searchQuery = $("#search-bar").val();
+	var searchQuery = $("#search-bar").val();
   if ( event.which == 13 ) {
-    window.location.href = 'http://www.google.com/search?q=' + searchQuery;
+	redirectList = ["https://www.facebook.com", "https://www.reddit.com", "https://www.trademe.co.nz", "https://www.sjs.co.nz"];
+	checkSearch(searchQuery, redirectList);
   }
 });
+function checkSearch(search, redirect) {
+	if (search.indexOf(".com") != -1 || search.indexOf(".co.nz") != -1) {
+		window.location.href = 'http://www.' + search;
+		return;
+	}
+	for (var i = 0; i < redirect.length; i++) {
+		if (redirect[i].slice(12).indexOf(search) == 0) {
+			window.location.href = redirect[i];
+			return;
+		}
+	}
+	window.location.href = 'https://www.google.com/search?q=' + search;
+}
 
 if (localStorage.getItem("locCity") == null) {
 	localStorage.setItem("locCity", "palmerston north")
