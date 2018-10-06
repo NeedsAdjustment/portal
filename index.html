@@ -183,8 +183,29 @@
 		box-shadow: 0px 2px 2px;
 	}
 
-	@media screen and (max-height: 860px), 	screen and (max-width: 920px)  {
-		#top {display: none}
+	@media screen and (height:not(768px)), 	screen and (width:not(1366px))  {
+		@media screen and (max-height: 860px), 	screen and (max-width: 920px)  {
+			#top {display: none}
+		}
+	}
+
+	@media screen and (height: 768px), 	screen and (width: 1366px)  {
+		#top {
+			position: relative;
+			background: #191919;
+			height: 130px;
+			width: 900px;
+			margin: auto;
+			margin-top: 50px;
+			border-radius: 8px;
+			box-shadow: 0px 2px 2px;
+		}
+		#bottom {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-40%);
+			width: 100%;
+		}
 	}
 
 	@media only screen and (max-width: 720px) {
