@@ -236,7 +236,7 @@ $(document).ready(function(){
 $(".container-rect").addClass("animated bounceInUp");
 
 $("#search-bar").keypress(function(event) {
-	var searchQuery = $("#search-bar").val();
+  var searchQuery = $("#search-bar").val();
   if ( event.which == 13 ) {
 	redirectList = ["https://www.facebook.com", "https://www.reddit.com", "https://www.trademe.co.nz", "https://www.sjs.co.nz"];
 	checkSearch(searchQuery, redirectList);
