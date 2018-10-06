@@ -253,7 +253,7 @@
 
 <script>
 $(document).ready(function(){
-
+var idk = 4;
 $(".container-rect").addClass("animated bounceInUp");
 
 $("#search-bar").keypress(function(event) {
@@ -263,9 +263,10 @@ $("#search-bar").keypress(function(event) {
 	checkSearch(searchQuery, redirectList);
   }
 });
+
 function checkSearch(search, redirect) {
-	if (search.indexOf(".com") != -1 || search.indexOf(".co.nz") != -1) {
-		window.location.href = 'http://www.' + search;
+	if (search.indexOf(".co") != -1 || search.indexOf(".org") != -1 || search.indexOf(".net") != -1) {
+		window.location.href = 'https://www.' + search;
 		return;
 	}
 	for (var i = 0; i < redirect.length; i++) {
