@@ -48,20 +48,20 @@
 					</p>
 					<p class="code-links">
 						<a href=""><div class="link category code-cat">coding</div></a>
-						<a id="code-link-1" href="https://github.com/NeedsAdjustment?direction=desc&sort=updated&tab=stars"><span class="link code code1">github</span></a>
-						<a id="code-link-2" href="https://forum.xda-developers.com/lg-v30/"><span class="link code code2">xdadev</span></a>
+						<a id="code-link-1" href="https://github.com"><span class="link code code1">github</span></a>
+						<a id="code-link-2" href="https://drive.google.com"><span class="link code code2">drive</span></a>
 						<a id="code-link-3" href="https://gmail.com"><span class="link code code3">gmail</span></a>
-						<a id="code-link-4" href="https://www.producthunt.com/"><span class="link code code4">producthunt</span></a>
-						<a id="code-link-5" href="http://reddit.com/r/android"><span class="link code code4">android</span></a>
-						<a id="code-link-6" href="http://reddit.com/r/windows10"><span class="link code code4">win10</span></a>
-						<a id="code-link-7" href="http://reddit.com/saved"><span class="link code code4">saved</span></a>
+						<a id="code-link-4" href="https://stream.massey.ac.nz"><span class="link code code4">stream</span></a>
+						<a id="code-link-5" href="https://snahp.it/"><span class="link code code4">snahp</span></a>
+						<a id="code-link-6" href="http://portal.pushbullet.com/"><span class="link code code4">portal</span></a>
+						<a id="code-link-7" href="http://reddit.com"><span class="link code code4">reddit</span></a>
 					</p>
 				</div>
 			</div>
 		</div>
 	</div>
 <style>
-	@import url('https://fonts.googleapis.com/css?family=Montserrat');
+	@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
 
 	body {
 		position: absolute;
@@ -70,6 +70,7 @@
 		font-size: 15px;
 		line-height: 20px;
 		font-family: 'Montserrat';
+		font-weight: '600';
 		margin: 0;
 		background: url("background.gif") no-repeat center center fixed;
 		background-size: cover;
@@ -218,27 +219,6 @@
 $(document).ready(function(){
 
 $(".container-rect").addClass("animated bounceInUp");
-
-$("#search-bar").keypress(function(event) {
-  var searchQuery = $("#search-bar").val();
-  if ( event.which == 13 ) {
-	redirectList = ["https://www.facebook.com", "https://www.reddit.com", "https://www.trademe.co.nz", "https://www.sjs.co.nz"];
-	checkSearch(searchQuery, redirectList);
-  }
-});
-function checkSearch(search, redirect) {
-	if (search.indexOf(".com") != -1 || search.indexOf(".co.nz") != -1) {
-		window.location.href = 'http://www.' + search;
-		return;
-	}
-	for (var i = 0; i < redirect.length; i++) {
-		if (redirect[i].slice(12).indexOf(search) == 0) {
-			window.location.href = redirect[i];
-			return;
-		}
-	}
-	window.location.href = 'https://www.google.com/search?q=' + search;
-}
 
 if (localStorage.getItem("locCity") == null) {
 	localStorage.setItem("locCity", "palmerston north")
