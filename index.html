@@ -1,399 +1,555 @@
 <head>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
-	<link rel="shortcut icon" href="caret.ico" type="image/x-icon">
-	<title>Hey Hey Hey</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <link
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+  />
+  <link rel="shortcut icon" href="caret.ico" type="image/x-icon" />
+  <title>Hey Hey Hey</title>
 </head>
 <body>
-	<div id="top">
-		<div class="top-left">
-			<div class="pad-left">
-				<p class="date"><span id="weekday"></span> <span id="month-date"></span></p>
-				<p class="weather-widget"> <span id="weather"></span></p>
-				<p id="btc-price">BTC Price: </p>
-			</div>
-		</div>
-		<div class="top-right">
-			<div class="pad-right">
-				<a href="" id="news-title-link"><p><span id="news-title"></span></p></a>
-				<p><span id="score-3"></span></p>
-				<p><span id="next-post-news">next post &rarr;</span></p>
-			</div>
-		</div>
-	</div>
+  <div id="top">
+    <div class="top-left">
+      <div class="pad-left">
+        <p class="date">
+          <span id="weekday"></span> <span id="month-date"></span>
+        </p>
+        <p class="weather-widget"><span id="weather"></span></p>
+        <p id="price">ETH Price:</p>
+      </div>
+    </div>
+    <div class="top-right">
+      <div class="pad-right">
+        <a href="" id="news-title-link"
+          ><p><span id="news-title"></span></p
+        ></a>
+        <p><span id="score-3"></span></p>
+        <p><span id="next-post-news">next post &rarr;</span></p>
+      </div>
+    </div>
+  </div>
 
-	<div id="bottom">
-		<div class="container-rect">
-			<div id="search">
-				<div id="links">
-					<p class="reddit-links">
-						<a href=""><div class="link category reddit-cat">theme</div></a>
-						<a id="reddit-link-1" href="http://reddit.com/r/unixporn"><span class="link reddit reddit1">unixp</span></a>
-						<a id="reddit-link-2" href="http://reddit.com/r/androidthemes"><span class="link reddit reddit2">androidthemes</span></a>
-						<a id="reddit-link-3" href="http://reddit.com/r/desktops"><span class="link reddit reddit3">desktops</span></a>
-						<a id="reddit-link-4" href="http://reddit.com/r/rainmeter"><span class="link reddit reddit4">rainmeter</span></a>
-						<a id="reddit-link-5" href="https://www.deviantart.com/notifications/watch"><span class="link reddit reddit5">deviantart</span></a>
-						<a id="reddit-link-6" href="http://boards.4chan.org/wg/"><span class="link reddit reddit5">wg</span></a>
-					</p>
-					<p class="games-links">
-						<a href=""><div class="link category games-cat">games</div></a>
-						<a id="games-link-1" href="https://youtube.com"><span class="link games games1">youtube</span></a>
-						<a id="games-link-2" href="https://twitch.tv"><span class="link games games1">twitch</span></a>
-						<a id="games-link-3" href="http://reddit.com/r/competitiveoverwatch"><span class="link games games2">compow</span></a>
-						<a id="games-link-4" href="http://reddit.com/r/overwatchtmz"><span class="link games games3">owtmz</span></a>
-						<a id="games-link-5" href="https://www.overbuff.com/players/pc/Edgedancer-11368?mode=competitive"><span class="link games games4">edgedancer</span></a>
-						<a id="games-link-6" href="https://www.overbuff.com/players/pc/finesse-11342?mode=competitive"><span class="link games games5">finesse</span></a>
-						<a id="games-link-6" href="https://www.overbuff.com/players/pc/Vin-12868?mode=competitive"><span class="link games games5">vin</span></a>
-					</p>
-					<p class="code-links">
-						<a href=""><div class="link category code-cat">coding</div></a>
-						<a id="code-link-1" href="https://github.com"><span class="link code code1">github</span></a>
-						<a id="code-link-2" href="https://drive.google.com"><span class="link code code2">drive</span></a>
-						<a id="code-link-3" href="https://gmail.com"><span class="link code code3">gmail</span></a>
-						<a id="code-link-4" href="https://stream.massey.ac.nz"><span class="link code code4">stream</span></a>
-						<a id="code-link-5" href="https://snahp.it/"><span class="link code code4">snahp</span></a>
-						<a id="code-link-6" href="http://portal.pushbullet.com/"><span class="link code code4">portal</span></a>
-						<a id="code-link-7" href="http://reddit.com"><span class="link code code4">reddit</span></a>
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-<style>
-	@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+  <div id="bottom">
+    <div class="container-rect">
+      <div id="search">
+        <div id="links">
+          <p>
+            <a href=""><div class="link category cat-1">links</div></a>
+            <a href="http://reddit.com"><span class="link">home</span></a>
+            <a href="http://reddit.com/saved"
+              ><span class="link">saved</span></a
+            >
+            <a href="http://reddit.com/r/mechanicalkeyboards"
+              ><span class="link">mk</span></a
+            >
+            <a href="http://reddit.com/r/mechmarket"
+              ><span class="link">mm</span></a
+            >
+            <a href="http://reddit.com/r/competitiveoverwatch"
+              ><span class="link">cow</span></a
+            >
+            <a href="http://reddit.com/r/overwatchtmz"
+              ><span class="link">owtmz</span></a
+            >
+            <a href="http://reddit.com/r/desktops"
+              ><span class="link">desk</span></a
+            >
+            <a href="https://www.deviantart.com/notifications/watch"
+              ><span class="link">dart</span></a
+            >
+            <a href="http://boards.4chan.org/wg/"
+              ><span class="link">wg</span></a
+            >
+          </p>
+          <p>
+            <a href=""><div class="link category cat-2">play</div></a>
+            <a href="https://mail.google.com"
+              ><span class="link">gmail</span></a
+            >
+            <a href="https://youtube.com"><span class="link">youtube</span></a>
+            <a href="https://github.com"><span class="link">github</span></a>
+            <a href="https://snahp.it"><span class="link">snahp</span></a>
+            <a href="https://cheapies.nz"><span class="link">cheap</span></a>
+            <a href="https://stream.massey.ac.nz"
+              ><span class="link">stream</span></a
+            >
+            <a href="http://portal.pushbullet.com"
+              ><span class="link">portal</span></a
+            >
+          </p>
+          <p>
+            <a href=""><div class="link category cat-3">work</div></a>
+            <a href="https://outlook.office.com/mail/inbox"
+              ><span class="link">outlook</span></a
+            >
+            <a href="https://biolumic.atlassian.net/browse/CSS"
+              ><span class="link">board</span></a
+            >
+            <a href="https://biolumic.atlassian.net/wiki/home"
+              ><span class="link">wiki</span></a
+            >
+            <a href="https://127.0.0.1:8080"><span class="link">8080</span></a>
+            <a href="https://127.0.0.1:9000"><span class="link">9000</span></a>
+            <a href="https://editor.swagger.io/"
+              ><span class="link">swag</span></a
+            >
+            <a href="https://login.xero.com/identity/user/login"
+              ><span class="link">pay</span></a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Montserrat:600&display=swap");
 
-	body {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		font-size: 15px;
-		line-height: 20px;
-		font-family: 'Montserrat';
-		font-weight: '600';
-		margin: 0;
-		background: url("background.gif") no-repeat center center fixed;
-		background-size: cover;
-		-moz-background-size: cover;
-		-webkit-background-size: cover;
-	}
+    @font-face {
+      font-family: "Gilroy SemiBold";
+      src: url("Gilroy-SemiBold.otf") format("opentype");
+    }
+    @font-face {
+      font-family: "Gilroy Medium";
+      src: url("Gilroy-Medium.otf") format("opentype");
+    }
 
-	p {
-		max-width: 800;
-		overflow: hidden;
-		white-space: nowrap;
-		text-overflow: ellipsis;
-	}
+    body {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      font-size: 18px;
+      line-height: 20px;
+      font-family: "Gilroy SemiBold";
+      font-weight: "600";
+      margin: 0;
+      background: url("background.gif") no-repeat center center fixed;
+      background-size: cover;
+      -moz-background-size: cover;
+      -webkit-background-size: cover;
+    }
 
-	a {text-decoration: none}
+    p {
+      max-width: 800;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
 
-	#links {padding-left: 7%}
+    a {
+      text-decoration: none;
+    }
 
-	.code, .games, .reddit {
-		cursor: pointer;
-		transition: color 0.5s ease;
-	}
+    #links {
+      padding-left: 5%;
+    }
 
-	.code-cat a {color: #3ECF8E !important}
-	.code-cat {border-right: 2px solid #3ECF8E}
-	.code:hover {color: #C8FFE0 !important}
+    .cat-3 a {
+      color: #3ecf8e !important;
+    }
+    .cat-3 {
+      border-right: 2px solid #3ecf8e;
+    }
+    .code:hover {
+      color: #c8ffe0 !important;
+    }
 
-	.games-cat a {color: #F7A623 !important}
-	.games-cat {border-right: 2px solid #F7A623}
-	.games:hover {color: #FFF7D3 !important}
+    .cat-2 a {
+      color: #f7a623 !important;
+    }
+    .cat-2 {
+      border-right: 2px solid #f7a623;
+    }
+    .games:hover {
+      color: #fff7d3 !important;
+    }
 
-	.reddit-cat a {color: #FF2851 !important}
-	.reddit-cat {border-right: 2px solid #FF2851}
-	.reddit:hover {color: #FAC0F2 !important}
+    .cat-1 a {
+      color: #ff2851 !important;
+    }
+    .cat-1 {
+      border-right: 2px solid #ff2851;
+    }
+    .reddit:hover {
+      color: #fac0f2 !important;
+    }
 
-	.category {
-		padding-right: 14px;
-		width: 50px;
-		float: left;
-	}
-	.link {
-		margin-right: 14px;
-		color: #F7F7F7;
-	}
+    .category {
+      padding-right: 18px;
+      width: 50px;
+      float: left;
+    }
+    .link {
+      margin-right: 18px;
+      color: #f7f7f7;
+      cursor: pointer;
+      transition: color 0.5s ease;
+      text-align: right;
+    }
 
-	::-webkit-input-placeholder, :-moz-placeholder,	::-moz-placeholder, :-ms-input-placeholder, ::-ms-input-placeholder {
-		color: #F7F7F7;
-		opacity: 1;
-	}
+    ::-webkit-input-placeholder,
+    :-moz-placeholder,
+    ::-moz-placeholder,
+    :-ms-input-placeholder,
+    ::-ms-input-placeholder {
+      color: #f7f7f7;
+      opacity: 1;
+    }
 
-	#news-title, #news-title-link {
-		color: #3ECF8E;
-	}
-	#news-title-link.hover {
-		color: #C8FFE0;
-	}
-	#score-3 {
-		color: #3298FE;
-	}
+    #news-title,
+    #news-title-link {
+      color: #3ecf8e;
+    }
+    #news-title-link.hover {
+      color: #c8ffe0;
+    }
+    #score-3 {
+      padding-left: 1px;
+      color: #3298fe;
+    }
 
-	.date {
-		color: #3ECF8E;
-	}
-	.weather-widget {
-		color: #3298FE;
-	}
-	#btc-price {
-		color: #F7F7F7;
-	}
+    .date {
+      color: #3ecf8e;
+    }
+    .weather-widget {
+      color: #3298fe;
+    }
+    #price {
+      color: #f7f7f7;
+    }
 
-	#top {
-		position: relative;
-		background: #191919;
-		height: 130px;
-		width: 900px;
-		margin: auto;
-		margin-top: 150px;
-		border-radius: 8px;
-		box-shadow: 0px 2px 2px;
-	}
-	#bottom {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		width: 100%;
-	}
+    #top {
+      font-family: "Gilroy Medium";
+      font-size: 16px;
+      position: relative;
+      background: #191919ee;
+      height: 130px;
+      width: 900px;
+      margin: auto;
+      margin-top: 150px;
+      border-radius: 8px;
+      box-shadow: 0px 2px 2px;
+    }
+    #bottom {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+    }
 
-	.container-rect {
-		background: #191919;
-		width: 700px;
-		border-radius: 8px;
-		border: 2px solid #191919;
-		position: relative;
-		top: 5%;
-		margin: 0 auto;
-		box-shadow: 0px 2px 2px;
-	}
+    .container-rect {
+      background: #191919ee;
+      width: 700px;
+      border-radius: 8px;
+      border: 2px solid #191919;
+      position: relative;
+      top: 5%;
+      margin: 0 auto;
+      box-shadow: 0px 2px 2px;
+    }
 
-	@media screen and (max-height: 860px), 	screen and (max-width: 920px)  {
-		#top {display: none}
-	}
+    @media screen and (max-height: 860px), screen and (max-width: 920px) {
+      #top {
+        display: none;
+      }
+    }
 
-	@media only screen and (max-width: 720px) {
-		.container-rect {
-			width: 600px;
-			font-size: 13px;
-			line-height: 13px;
-		}
-	}
+    @media only screen and (max-width: 720px) {
+      .container-rect {
+        width: 600px;
+        font-size: 13px;
+        line-height: 13px;
+      }
+    }
 
-	#next-post-news {
-		cursor: pointer;
-		color: #F7F7F7;
-	}
+    #next-post-news {
+      cursor: pointer;
+      color: #f7f7f7;
+    }
 
-	#searchbar {
-		background-color: transparent;
-		border: 0;
-		width: 90%;
-		text-align: center;
-	}
+    #searchbar {
+      background-color: transparent;
+      border: 0;
+      width: 90%;
+      text-align: center;
+    }
 
-	.pad-left, .pad-right {padding-left: 1em}
+    .pad-left,
+    .pad-right {
+      padding-left: 1em;
+    }
 
-	.top-left {
-		position: absolute;
-		width: 16%;
-		min-width: 280px;
-		border-right: 2px solid #3298FE;
-		float: left;
-		height: 100%;
-		text-align: right;
-		padding-right: 15px;
-	}
-	.top-right {
-		width: 84%;
-		max-width: 580px;
-    	float: left;
-		height: 100%;
-		padding-top: 4px;
-		padding-left: 297px;
-	}
-</style>
+    .top-left {
+      position: absolute;
+      width: 16%;
+      min-width: 280px;
+      border-right: 2px solid #3298fe;
+      float: left;
+      height: 100%;
+      text-align: right;
+      padding-right: 15px;
+    }
+    .top-right {
+      width: 84%;
+      max-width: 580px;
+      float: left;
+      height: 100%;
+      padding-top: 4px;
+      padding-left: 297px;
+    }
+  </style>
 
-<script>
-$(document).ready(function(){
+  <script>
+    $(document).ready(function () {
+      $(".container-rect").addClass("animated bounceInUp");
 
-$(".container-rect").addClass("animated bounceInUp");
+      if (localStorage.getItem("locCity") == null) {
+        localStorage.setItem("locCity", "palmerston north");
+      }
+      if (localStorage.getItem("locCountry") == null) {
+        localStorage.setItem("locCountry", "nz");
+      }
+      if (localStorage.getItem("unit") == null) {
+        localStorage.setItem("unit", "&deg;C");
+        $("#cel").attr("checked", "checked");
+      } else if (localStorage.getItem("unit") == "&deg;C") {
+        $("#cel").attr("checked", "checked");
+      } else if (localStorage.getItem("unit") == "&deg;F") {
+        $("#far").attr("checked", "checked");
+      }
 
-if (localStorage.getItem("locCity") == null) {
-	localStorage.setItem("locCity", "palmerston north")
-}
-if (localStorage.getItem("locCountry") == null) {
-	localStorage.setItem("locCountry", "nz")
-}
-if (localStorage.getItem("unit") == null) {
-	localStorage.setItem("unit", "&deg;C")
-	$("#cel").attr('checked', 'checked');
-} else if(localStorage.getItem("unit") == "&deg;C") {
-	$("#cel").attr('checked', 'checked');
-} else if(localStorage.getItem("unit") == "&deg;F") {
-	$("#far").attr('checked', 'checked');
-}
+      var baseURL = "https://api.openweathermap.org/data/2.5/weather?q=";
+      var city = localStorage.getItem("locCity");
+      var country = localStorage.getItem("locCountry");
+      var key = "&APPID=15dac795069e9f6ef5b3c4c435136247";
+      var apiurl = baseURL + city + "," + country + key;
+      var unit = localStorage.getItem("unit");
 
-var baseURL = "https://api.openweathermap.org/data/2.5/weather?q=";
-var city = localStorage.getItem('locCity');
-var country = localStorage.getItem('locCountry')
-var key = "&APPID=15dac795069e9f6ef5b3c4c435136247";
-var apiurl = baseURL + city + "," + country + key;
-var unit = localStorage.getItem('unit');
+      $(".entercity").attr("value", city);
+      $(".entercountry").attr("value", country);
 
-$(".entercity").attr("value", city);
-$(".entercountry").attr("value", country);
+      function getWeather() {
+        var baseURL = "https://api.openweathermap.org/data/2.5/weather?q=";
+        var city = localStorage.getItem("locCity");
+        var country = localStorage.getItem("locCountry");
+        var key = "&APPID=15dac795069e9f6ef5b3c4c435136247";
+        var apiurl = baseURL + city + "," + country + key;
+        var unit = localStorage.getItem("unit");
 
-function getWeather() {
-	var baseURL = "https://api.openweathermap.org/data/2.5/weather?q=";
-	var city = localStorage.getItem('locCity');
-	var country = localStorage.getItem('locCountry')
-	var key = "&APPID=15dac795069e9f6ef5b3c4c435136247";
-	var apiurl = baseURL + city + "," + country + key;
-	var unit = localStorage.getItem('unit');
+        $.getJSON(apiurl, function (result) {
+          var temp = result.main.temp;
+          if (localStorage.getItem("unit") == "&deg;C") {
+            temp = temp - 273.15;
+            temp = Math.round(temp);
+          } else if (localStorage.getItem("unit") == "&deg;F") {
+            temp = temp - 273.15;
+            temp = temp * 1.8;
+            temp = temp + 32;
+            temp = Math.round(temp);
+          }
 
-	$.getJSON(apiurl,function(result){
-		var temp = result.main.temp;
-		if (localStorage.getItem("unit") == "&deg;C") {
-			temp = temp - 273.15;
-			temp = Math.round(temp);
-		} else if (localStorage.getItem("unit") == "&deg;F") {
-			temp = temp - 273.15;
-			temp = temp * 1.8;
-			temp = temp + 32;
-			temp = Math.round(temp);
-		}
+          $("#weather")
+            .empty()
+            .append(
+              result.name +
+                ": " +
+                temp +
+                unit +
+                ", " +
+                result.weather[0].description
+            );
+        });
+      }
+      getWeather();
 
-		$("#weather").empty().append(result.name + ": " + temp + unit + ", " + result.weather[0].description);
-	});
-}
-getWeather();
+      $("#save").click(function () {
+        if ($(".entercity").length > 0 && $(".entercity").val() != "") {
+          localStorage.setItem("locCity", $(".entercity").val());
+        }
+        if ($(".entercountry").length > 0 && $(".entercountry").val() != "") {
+          localStorage.setItem("locCountry", $(".entercountry").val());
+        }
+        if ($("input[id=far]").is(":checked")) {
+          localStorage.setItem("unit", "&deg;F");
+        }
+        if ($("input[id=cel]").is(":checked")) {
+          localStorage.setItem("unit", "&deg;C");
+        }
+        getWeather();
+        $(".settings").slideToggle();
+      });
 
-$("#save").click(function(){
-	if ($('.entercity').length > 0 && $('.entercity').val() != '') {
-		localStorage.setItem("locCity", $(".entercity").val());
-	}
-	if ($('.entercountry').length > 0 && $('.entercountry').val() != '') {
-		localStorage.setItem("locCountry", $(".entercountry").val());
-	}
-	if ($('input[id=far]').is(":checked")) {
-		localStorage.setItem("unit", "&deg;F");
-	}
-	if ($('input[id=cel]').is(":checked")) {
-		localStorage.setItem("unit", "&deg;C");
-	}
-	getWeather();
-	$(".settings").slideToggle();
-});
+      var date = new Date();
+      var weekdays = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+      var months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+      var weekday = weekdays[date.getDay()];
+      var month = date.getMonth();
+      var monthday = date.getDate();
+      var year = date.getYear();
 
-var date = new Date();
-var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-var weekday = weekdays[date.getDay()];
-var month = date.getMonth();
-var monthday = date.getDate();
-var year = date.getYear();
+      $("#weekday").html(weekday);
 
-$('#weekday').html(weekday);
+      switch (monthday) {
+        case 1:
+        case 21:
+        case 31:
+          var affix = "st";
+          $("#month-date").html(
+            months[month] +
+              " " +
+              monthday +
+              "<sup>" +
+              affix +
+              "</sup> " +
+              (year + 1900)
+          );
+          break;
+        case 2:
+        case 22:
+          var affix = "nd";
+          $("#month-date").html(
+            months[month] +
+              " " +
+              monthday +
+              "<sup>" +
+              affix +
+              "</sup> " +
+              (year + 1900)
+          );
+          break;
+        case 3:
+        case 23:
+          var affix = "rd";
+          $("#month-date").html(
+            months[month] +
+              " " +
+              monthday +
+              "<sup>" +
+              affix +
+              "</sup> " +
+              (year + 1900)
+          );
+          break;
+        case 4:
+        case 5:
+        case 6:
+        case 7:
+        case 8:
+        case 9:
+        case 10:
+        case 11:
+        case 12:
+        case 13:
+        case 14:
+        case 15:
+        case 16:
+        case 17:
+        case 18:
+        case 19:
+        case 20:
+        case 24:
+        case 25:
+        case 26:
+        case 27:
+        case 28:
+        case 29:
+        case 30:
+          var affix = "th";
+          $("#month-date").html(
+            months[month] +
+              " " +
+              monthday +
+              "<sup>" +
+              affix +
+              "</sup> " +
+              (year + 1900)
+          );
+      }
 
-switch (monthday) {
-	case 1:
-	case 21:
-	case 31:
-    	var affix = "st";
-		$('#month-date').html(months[month] + " " + monthday + "<sup>" + affix + "</sup> " + (year+1900));
-    	break;
-	case 2:
-	case 22:
-    	var affix = "nd";
-		$('#month-date').html(months[month] + " " + monthday + "<sup>" + affix + "</sup> " + (year+1900));
-    	break;
-	case 3:
-	case 23:
-     	var affix = "rd";
-		$('#month-date').html(months[month] + " " + monthday + "<sup>" + affix + "</sup> " + (year+1900));
-   	break;
-	case 4:
-	case 5:
-	case 6:
-	case 7:
-	case 8:
-	case 9:
-	case 10:
-	case 11:
-	case 12:
-	case 13:
-	case 14:
-	case 15:
-	case 16:
-	case 17:
-	case 18:
-	case 19:
-	case 20:
-	case 24:
-	case 25:
-	case 26:
-	case 27:
-	case 28:
-	case 29:
-	case 30:
-   	var affix = "th";
-		$('#month-date').html(months[month] + " " + monthday + "<sup>" + affix + "</sup> " + (year+1900));
-}
+      function price() {
+        var currency = "NZD";
+        var apiurl =
+          "https://api.coinstats.app/public/v1/coins/ethereum?currency=" +
+          currency;
 
-function btcprice() {
-var currency = "USD";
-var apiurl = 'https://api.coindesk.com/v1/bpi/currentprice/' + currency + '.json';
+        $.ajax({
+          type: "GET",
+          url: apiurl,
+          async: false,
+          dataType: "json",
+          success: function (data) {
+            var price = data["coin"]["price"];
+            var priceRounded = Math.round(price);
+            $("#price").append(" $" + priceRounded + " " + currency);
+          },
+          error: function (errorMessage) {},
+        });
+      }
+      price();
 
-$.ajax({
-  type: "GET",
-  url: apiurl,
-  async: false,
-  dataType: 'json',
-  success: function(data){
-    var price = data["bpi"][currency]["rate_float"];
-	  var priceRounded = Math.round(price);
-	  $("#btc-price").append("$" + priceRounded + " " + currency);
-    },
-  error: function(errorMessage){}
-});
-}
-btcprice();
+      var subreddit = "worldnews";
+      var apiurl = "https://www.reddit.com/r/" + subreddit + "/.json?";
+      var postnum = 1;
 
-var subreddit = "News";
-var apiurl = 'https://www.reddit.com/r/' + subreddit + '/.json?';
-var postnum = 1;
+      function updatepost() {
+        $.ajax({
+          type: "GET",
+          url: apiurl,
+          async: false,
+          dataType: "json",
+          success: function (data) {
+            var title = data["data"]["children"][postnum]["data"]["title"];
+            var score = data["data"]["children"][postnum]["data"]["score"];
+            if (title.length >= 100) {
+              var shorttitle = title.substring(0, 70);
+              shorttitle += "...";
+            } else {
+              var shorttitle = title;
+            }
+            $("#news-title").empty().prepend(shorttitle);
+            $("#score-3")
+              .empty()
+              .append('<i class="fa fa-heart"> </i>' + " " + score);
+            $("#news-title-link").attr(
+              "href",
+              "https://reddit.com" +
+                data["data"]["children"][postnum]["data"]["permalink"]
+            );
+          },
+          error: function (errorMessage) {},
+        });
+      }
+      updatepost();
 
-function updatepost() {
-    $.ajax({
-      type: "GET",
-      url: apiurl,
-      async: false,
-      dataType: 'json',
-      success: function(data){
-        var title = data["data"]["children"][postnum]["data"]["title"];
-		var score = data["data"]["children"][postnum]["data"]["score"];
-		if (title.length >= 100) {
-			var shorttitle = title.substring(0, 70);
-			shorttitle += "...";
-		} else {
-			var shorttitle = title;
-		}
-		  	$("#news-title").empty().prepend(shorttitle);
-		  	$("#score-3").empty().append('<i class="fa fa-heart"> </i>' + ' ' + score);
-		  	$("#news-title-link").attr("href","https://reddit.com" + data["data"]["children"][postnum]["data"]["permalink"]);
-      	},
-      	error: function(errorMessage){}
-    }); // END ajax call
-} // End Update Post function
-updatepost();
-
-$("#next-post-news").click(function(){
-	postnum = postnum+2;
-	updatepost();
-});
-
-});
-</script>
+      $("#next-post-news").click(function () {
+        postnum = postnum + 2;
+        updatepost();
+      });
+    });
+  </script>
 </body>
