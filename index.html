@@ -1,43 +1,46 @@
-<head>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-  <link
-    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    rel="stylesheet"
-    crossorigin="anonymous"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
-  />
-  <link rel="shortcut icon" href="caret.ico" type="image/x-icon" />
-  <title>Hey Hey Hey</title>
-  <script src="./script.js" async defer></script>
-</head>
-<body>
-  <div id="top">
-    <div class="top-left">
-      <div class="pad-left">
-        <p class="date">
-          <span id="weekday"></span> <span id="month-date"></span>
-        </p>
-        <p class="weather-widget"><span id="weather"></span></p>
-        <p id="price"></p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+    />
+    <link rel="shortcut icon" href="caret.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Hey Hey Hey</title>
+    <script src="./script.js" async defer></script>
+  </head>
+  <body>
+    <div id="top">
+      <div class="top-left">
+        <div class="pad-left">
+          <p class="date">
+            <span id="weekday"></span> <span id="month-date"></span>
+          </p>
+          <p class="weather-widget"><span id="weather"></span></p>
+          <p id="price"></p>
+        </div>
+      </div>
+      <div class="top-right">
+        <div class="pad-right">
+          <a href="" id="news-title-link"
+            ><p><span id="news-title"></span></p
+          ></a>
+          <p><span id="score-3"></span></p>
+          <p><span id="next-post-news">next post &rarr;</span></p>
+        </div>
       </div>
     </div>
-    <div class="top-right">
-      <div class="pad-right">
-        <a href="" id="news-title-link"
-          ><p><span id="news-title"></span></p
-        ></a>
-        <p><span id="score-3"></span></p>
-        <p><span id="next-post-news">next post &rarr;</span></p>
-      </div>
-    </div>
-  </div>
 
-  <div id="bottom">
-    <div class="container-rect">
-      <div id="search">
+    <div id="bottom">
+      <div class="container-rect">
         <div id="links">
           <p>
             <a href=""><div class="link category cat-1">links</div></a>
@@ -110,201 +113,5 @@
         </div>
       </div>
     </div>
-  </div>
-  <style>
-    @import url("https://fonts.googleapis.com/css?family=Montserrat:600&display=swap");
-
-    @font-face {
-      font-family: "Gilroy SemiBold";
-      src: url("Gilroy-SemiBold.otf") format("opentype");
-    }
-    @font-face {
-      font-family: "Gilroy Medium";
-      src: url("Gilroy-Medium.otf") format("opentype");
-    }
-
-    body {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      font-size: 18px;
-      line-height: 20px;
-      font-family: "Gilroy SemiBold";
-      font-weight: "600";
-      margin: 0;
-      background: url("background.gif") no-repeat center center fixed;
-      background-size: cover;
-      -moz-background-size: cover;
-      -webkit-background-size: cover;
-    }
-
-    p {
-      max-width: 800;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    #links {
-      padding-left: 5%;
-    }
-
-    .cat-3 a {
-      color: #3ecf8e !important;
-    }
-    .cat-3 {
-      border-right: 2px solid #3ecf8e;
-    }
-    .code:hover {
-      color: #c8ffe0 !important;
-    }
-
-    .cat-2 a {
-      color: #f7a623 !important;
-    }
-    .cat-2 {
-      border-right: 2px solid #f7a623;
-    }
-    .games:hover {
-      color: #fff7d3 !important;
-    }
-
-    .cat-1 a {
-      color: #ff2851 !important;
-    }
-    .cat-1 {
-      border-right: 2px solid #ff2851;
-    }
-    .reddit:hover {
-      color: #fac0f2 !important;
-    }
-
-    .category {
-      padding-right: 18px;
-      width: 50px;
-      float: left;
-    }
-    .link {
-      margin-right: 18px;
-      color: #f7f7f7;
-      cursor: pointer;
-      transition: color 0.5s ease;
-      text-align: right;
-    }
-
-    ::-webkit-input-placeholder,
-    :-moz-placeholder,
-    ::-moz-placeholder,
-    :-ms-input-placeholder,
-    ::-ms-input-placeholder {
-      color: #f7f7f7;
-      opacity: 1;
-    }
-
-    #news-title,
-    #news-title-link {
-      color: #3ecf8e;
-    }
-    #news-title-link.hover {
-      color: #c8ffe0;
-    }
-    #score-3 {
-      padding-left: 1px;
-      color: #3298fe;
-    }
-
-    .date {
-      color: #3ecf8e;
-    }
-    .weather-widget {
-      color: #3298fe;
-    }
-    #price {
-      color: #f7f7f7;
-    }
-
-    #top {
-      font-family: "Gilroy Medium";
-      font-size: 16px;
-      position: relative;
-      background: #191919ee;
-      height: 130px;
-      width: 900px;
-      margin: auto;
-      margin-top: 150px;
-      border-radius: 8px;
-      box-shadow: 0px 2px 2px;
-    }
-    #bottom {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 100%;
-    }
-
-    .container-rect {
-      background: #191919ee;
-      width: 700px;
-      border-radius: 8px;
-      border: 2px solid #191919;
-      position: relative;
-      top: 5%;
-      margin: 0 auto;
-      box-shadow: 0px 2px 2px;
-    }
-
-    @media screen and (max-height: 860px), screen and (max-width: 920px) {
-      #top {
-        display: none;
-      }
-    }
-
-    @media only screen and (max-width: 720px) {
-      .container-rect {
-        width: 600px;
-        font-size: 13px;
-        line-height: 13px;
-      }
-    }
-
-    #next-post-news {
-      cursor: pointer;
-      color: #f7f7f7;
-    }
-
-    #searchbar {
-      background-color: transparent;
-      border: 0;
-      width: 90%;
-      text-align: center;
-    }
-
-    .pad-left,
-    .pad-right {
-      padding-left: 1em;
-    }
-
-    .top-left {
-      position: absolute;
-      width: 16%;
-      min-width: 280px;
-      border-right: 2px solid #3298fe;
-      float: left;
-      height: 100%;
-      text-align: right;
-      padding-right: 15px;
-    }
-    .top-right {
-      width: 84%;
-      max-width: 580px;
-      float: left;
-      height: 100%;
-      padding-top: 4px;
-      padding-left: 297px;
-    }
-  </style>
-</body>
+  </body>
+</html>
