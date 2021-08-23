@@ -113,7 +113,7 @@ a {
   position: relative;
   background: #191919ee;
   height: 130px;
-  width: 900px;
+  width: 850px;
   margin: auto;
   margin-top: 150px;
   border-radius: 8px;
@@ -146,7 +146,7 @@ a {
 @media only screen and (max-width: 720px) {
   .container-rect {
     width: 600px;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 13px;
   }
 }
@@ -163,8 +163,7 @@ a {
 
 .top-left {
   position: absolute;
-  width: 16%;
-  min-width: 280px;
+  min-width: 240px;
   border-right: 2px solid #3298fe;
   float: left;
   height: 100%;
@@ -172,10 +171,9 @@ a {
   padding-right: 15px;
 }
 .top-right {
-  width: 84%;
   max-width: 580px;
   float: left;
   height: 100%;
   padding-top: 4px;
-  padding-left: 297px;
+  padding-left: 255px;
 }
