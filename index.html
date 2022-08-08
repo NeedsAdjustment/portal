@@ -1,126 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-    <link
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
-    />
-    <link rel="shortcut icon" href="caret.ico" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>Portal</title>
-    <script src="./script.js" async defer></script>
-  </head>
-  <body>
-    <div id="top">
-      <div class="top-left">
-        <div class="pad-left">
-          <p class="date">
-            <span id="weekday"></span> <span id="month-date"></span>
-          </p>
-          <p class="weather-widget"><span id="weather"></span></p>
-          <p id="price"></p>
-        </div>
-      </div>
-      <div class="top-right">
-        <div class="pad-right">
-          <a href="" id="news-title-link"
-            ><p><span id="news-title"></span></p
-          ></a>
-          <p><span id="score-3"></span></p>
-          <p><span id="next-post-news">next post &rarr;</span></p>
-        </div>
-      </div>
-    </div>
+    <head>
+        <meta charset="utf-8" />
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WCSNM5V9TZ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || []
+            function gtag() {
+                dataLayer.push(arguments)
+            }
+            gtag('js', new Date())
 
-    <div id="bottom">
-      <div class="container-rect">
-        <div id="links">
-          <p>
-            <a href=""><div class="link category cat-1">links</div></a>
-            <a href="http://reddit.com"><span class="link">home</span></a>
-            <a href="http://reddit.com/saved"
-              ><span class="link">saved</span></a
-            >
-            <a href="http://reddit.com/r/mechanicalkeyboards"
-              ><span class="link">mk</span></a
-            >
-            <a href="http://reddit.com/r/mechmarket"
-              ><span class="link">mm</span></a
-            >
-            <a href="http://reddit.com/r/competitiveoverwatch"
-              ><span class="link">cow</span></a
-            >
-            <a href="http://reddit.com/r/overwatchtmz"
-              ><span class="link">owtmz</span></a
-            >
-            <a href="http://reddit.com/r/desktops"
-              ><span class="link">desk</span></a
-            >
-            <a href="https://www.deviantart.com/notifications/watch"
-              ><span class="link">dart</span></a
-            >
-            <a href="http://boards.4chan.org/wg/"
-              ><span class="link">wg</span></a
-            >
-          </p>
-          <p>
-            <a href=""><div class="link category cat-2">play</div></a>
-            <a href="https://mail.google.com"
-              ><span class="link">gmail</span></a
-            >
-            <a href="https://youtube.com"><span class="link">yt</span></a>
-            <a
-              href="https://www.flexpool.io/miner/eth/0x8BE5553Db3DC1E108F7726185AB12C94A633513D"
-              ><span class="link">mine</span></a
-            >
-            <a href="https://fora.snahp.eu/"><span class="link">snahp</span></a>
-            <a href="https://cheapies.nz/deals"
-              ><span class="link">cheap</span></a
-            >
-            <a href="https://stream.massey.ac.nz"
-              ><span class="link">stream</span></a
-            >
-            <a href="http://portal.pushbullet.com"
-              ><span class="link">portal</span></a
-            >
-            <a href="https://www.nzpost.co.nz/tools/tracking"
-              ><span class="link">post</span></a
-            >
-          </p>
-          <p>
-            <a href=""><div class="link category cat-3">work</div></a>
-            <a href="https://outlook.office.com/mail/inbox"
-              ><span class="link">outlook</span></a
-            >
-            <a href="https://biolumic.atlassian.net/browse/CSS"
-              ><span class="link">board</span></a
-            >
-            <a href="https://biolumic.atlassian.net/wiki/home"
-              ><span class="link">wiki</span></a
-            >
-            <a href="https://127.0.0.1:8080/webpack-dev-server/"
-              ><span class="link">8080</span></a
-            >
-            <a href="https://127.0.0.1:9000/webpack-dev-server/"
-              ><span class="link">9000</span></a
-            >
-            <a href="https://editor.swagger.io/"
-              ><span class="link">swag</span></a
-            >
-            <a href="https://login.xero.com/identity/user/login"
-              ><span class="link">pay</span></a
-            >
-            <a href="https://github.com"><span class="link">github</span></a>
-          </p>
+            gtag('config', 'G-WCSNM5V9TZ')
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+        <link rel="shortcut icon" href="caret.ico" type="image/x-icon" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <title>Portal</title>
+        <script src="./script.js" async defer></script>
+    </head>
+    <body>
+        <div id="top">
+            <div class="top-left">
+                <div class="pad-left">
+                    <p class="date"><span id="weekday"></span> <span id="month-date"></span></p>
+                    <p class="weather-widget"><span id="weather"></span></p>
+                    <p id="price"></p>
+                </div>
+            </div>
+            <div class="top-right">
+                <div class="pad-right">
+                    <a href="" id="news-title-link"
+                        ><p><span id="news-title"></span></p
+                    ></a>
+                    <p><span id="score-3"></span></p>
+                    <p><span id="next-post-news">next post &rarr;</span></p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </body>
+
+        <div id="bottom">
+            <div class="container-rect">
+                <div id="links">
+                    <p>
+                        <a href=""><div class="link category cat-1">links</div></a>
+                        <a href="http://reddit.com"><span class="link">home</span></a>
+                        <a href="http://reddit.com/saved"><span class="link">saved</span></a>
+                        <a href="http://reddit.com/r/mechanicalkeyboards"><span class="link">mk</span></a>
+                        <a href="http://reddit.com/r/mechmarket"><span class="link">mm</span></a>
+                        <a href="http://reddit.com/r/competitiveoverwatch"><span class="link">cow</span></a>
+                        <a href="http://reddit.com/r/overwatchtmz"><span class="link">owtmz</span></a>
+                        <a href="http://reddit.com/r/desktops"><span class="link">desk</span></a>
+                        <a href="https://www.deviantart.com/notifications/watch"><span class="link">dart</span></a>
+                        <a href="http://boards.4chan.org/wg/"><span class="link">wg</span></a>
+                    </p>
+                    <p>
+                        <a href=""><div class="link category cat-2">play</div></a>
+                        <a href="https://mail.google.com"><span class="link">gmail</span></a>
+                        <a href="https://youtube.com"><span class="link">yt</span></a>
+                        <a href="https://www.flexpool.io/miner/eth/0x8BE5553Db3DC1E108F7726185AB12C94A633513D"><span class="link">mine</span></a>
+                        <a href="https://fora.snahp.eu/"><span class="link">snahp</span></a>
+                        <a href="https://cheapies.nz/deals"><span class="link">cheap</span></a>
+                        <a href="https://stream.massey.ac.nz"><span class="link">stream</span></a>
+                        <a href="http://portal.pushbullet.com"><span class="link">portal</span></a>
+                        <a href="https://www.nzpost.co.nz/tools/tracking"><span class="link">post</span></a>
+                    </p>
+                    <p>
+                        <a href=""><div class="link category cat-3">work</div></a>
+                        <a href="https://outlook.office.com/mail/inbox"><span class="link">outlook</span></a>
+                        <a href="https://biolumic.atlassian.net/browse/CSS"><span class="link">board</span></a>
+                        <a href="https://biolumic.atlassian.net/wiki/home"><span class="link">wiki</span></a>
+                        <a href="https://127.0.0.1:8080/webpack-dev-server/"><span class="link">8080</span></a>
+                        <a href="https://127.0.0.1:9000/webpack-dev-server/"><span class="link">9000</span></a>
+                        <a href="https://editor.swagger.io/"><span class="link">swag</span></a>
+                        <a href="https://login.xero.com/identity/user/login"><span class="link">pay</span></a>
+                        <a href="https://github.com"><span class="link">github</span></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
