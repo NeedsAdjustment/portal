@@ -1,3 +1,3 @@
-# Portal
+# Portal (Deprecated)
 
-Hosted [here](https://joshuasoong.studio/portal). Continual WIP - features may be removed or added at any time.
+Hosted [here](https://joshuasoong.studio/portal). No longer WIP - now using [Glance](https://github.com/glanceapp/glance).
